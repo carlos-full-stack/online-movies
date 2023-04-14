@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchMovies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
+</head>
 <body>
-
-    <h1>Sprint 4 IT ACADEMY</h1>
-    
+    <div id="boxcontainer">
+        <header>
+            <div id="logo">
+                <img src="images/logo.png" alt="logo" id="logo">
+            </div>
+            <div id="nav">
+                <nav>
+                    <ul>
+                        <li>Novedades</li>
+                        <li>Ver todas</li>
+                        <li>Categorías</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="icons">
+                <div id="search">
+                    <img src="images/search.png" id="search" alt="search">
+                </div>
+                <div id="hamburger">
+                    <img src="images/hamburger.png" id="hamburger" alt="hamburger">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="content">
+                <div id="hot">
+                    <h2>Novedades</h2>
+                    <div>Nuevas peliculas</div>
+                </div>
+                <div id="ramdom">
+                    <h2>Aleatorio</h2>
+                    <div>Peliculas aleatorias</div>
+                </div>
+                <div id="gender">
+                    <h2>Generos</h2>
+                    <div>Etiquetas generos</div>
+                </div>
+                <div id="popular">
+                    <h2>Populares</h2>
+                    <div>Peliculas populares</div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>PlayFish 2023</div>
+        </footer>
+    </div>
+    <script src="data.js"></script>
+    <script src="films.js"></script>
 </body>
-
 </html>
