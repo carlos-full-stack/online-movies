@@ -16,6 +16,11 @@ body {
     border-radius: 20px;
 }
 
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #80808029;
+}
+
 header, #icons {
     display: flex;
     justify-content: space-between;
@@ -47,8 +52,12 @@ main {
     display: grid;
 }
 
-#content div {
-    height: 250px;
+#gender, #ramdom, #popular {
+    border-top: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+#hot, #gender, #ramdom, #popular {
+    padding: 15px 15px 30px 15px;
 }
 
 footer {
@@ -64,7 +73,7 @@ footer {
     nav ul {
         display: inline-flex;
         list-style: none;
-        gap: 80px;
+        gap: 50px;
     }
 
     nav ul a {
@@ -75,5 +84,36 @@ footer {
     nav ul a:hover {
         text-decoration: none;
         color: #FB75F9;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #content {
+        grid-template-columns: 35% 65%;
+        border-top: 1px solid #80808029;
+    }
+
+    header {
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+
+    main {
+        margin-top: 0px;
+    }
+
+    #gender, #hot {
+        border-right: 1px solid #80808029;
+    }
+
+    #hot, #gender, #ramdom, #popular {
+        padding: 20px 20px 40px 20px;
+    }
+
+    #gender {
+        border-top: 1px solid #80808029;
+        background-color: #1d1d1f;
     }
 }
