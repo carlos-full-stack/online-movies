@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
     color: white;
     background-color: #999999;
     display: flex;
