@@ -1,58 +1,30 @@
-// Exercise 1: Get the array of all directors.
-function getAllDirectors(array) {
-  let result =  ???;
-  console.log("EXERCICE 1 ->", result);
-  return result;
+const mainContent = document.querySelector("main")
+
+
+function getAllDirectors() {
+
+  const arrayDirectors = movies.map(movie => movie.director);
+
+  return arrayDirectors;
+
 }
 
-// Exercise 2: Get the films of a certain director
-function getMoviesFromDirector(array, director) {
- 
-}
-
-// Exercise 3: Calculate the average of the films of a given director.
-function moviesAverageOfDirector(array, director) {
+function showDirectors() { 
   
-}
+  mainContent.innerHTML = "";
 
-// Exercise 4:  Alphabetic order by title 
-function orderAlphabetically(array) {
-  
-}
+  arrayDirectors = getAllDirectors();
 
-// Exercise 5: Order by year, ascending
-function orderByYear() {
+  mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='hot'><h2>Directores</h2><div><ul id='directorsList'></ul></div></div>"
 
-}
-
-// Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory() {
-
-}
-
-// Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes() {
-
-}
-
-// Exercise 8: Get the best film of a year
-function bestFilmOfYear() {
-  
-}
+  const directorsList = document.getElementById("directorsList")
 
 
+  arrayDirectors.forEach(director => {
 
-// The following is required to make unit tests work.
-/* Environment setup. Do not modify the below code. */
-if (typeof module !== 'undefined') {
-  module.exports = {
-    getAllDirectors,
-    getMoviesFromDirector,
-    moviesAverageOfDirector,
-    orderAlphabetically,
-    orderByYear,
-    moviesAverageByCategory,
-    hoursToMinutes,
-    bestFilmOfYear,
-  };
+    directorsList.innerHTML += '<li>' + director + '</li>';
+
+  });
+
+
 }
