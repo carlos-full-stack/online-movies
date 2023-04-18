@@ -10,6 +10,15 @@ body {
     margin: 35px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 #boxcontainer {
     background-color: #17161b;
     width: 95%;
