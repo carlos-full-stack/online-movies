@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body onload="showHome()">
     <div id="boxcontainer">
         <header>
             <div id="logo">
@@ -20,6 +20,7 @@
             <div id="nav">
                 <nav>
                     <ul>
+                        <li><a href="#showhome" onclick="showHome()">Home</a></li>
                         <li><a href="#">Novedades</a></li>
                         <li><a href="#">Ver todas</a></li>
                         <li><a href="#">Categorias</a></li>
@@ -37,24 +38,7 @@
             </div>
         </header>
         <main>
-            <div id="content">
-                <div id="hot">
-                    <h2>Novedades</h2>
-                    <div>Nuevas peliculas</div>
-                </div>
-                <div id="ramdom">
-                    <h2>Aleatorio</h2>
-                    <div>Peliculas aleatorias</div>
-                </div>
-                <div id="gender">
-                    <h2>Generos</h2>
-                    <div>Etiquetas generos</div>
-                </div>
-                <div id="popular">
-                    <h2>Populares</h2>
-                    <div>Peliculas populares</div>
-                </div>
-            </div>
+                <!-- Page content loaded dinamically -->
         </main>
         <footer>
             <div>PlayFish 2023</div>
@@ -62,5 +46,6 @@
     </div>
     <script src="data.js"></script>
     <script src="films.js"></script>
+    <script src="content.js"></script>
 </body>
 </html>

@@ -1,5 +1,16 @@
 const mainContent = document.querySelector("main")
 
+
+ function showHome() {
+
+  const homeContent = content[0]['html'];
+
+  mainContent.innerHTML = homeContent;
+
+ }
+
+
+
 function getAllDirectors() {
 
   const arrayDirectors = movies.map(movie => movie.director);

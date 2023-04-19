@@ -58,7 +58,7 @@ main {
     margin-top: 20px;
 }
 
-#content {
+#home-content {
     display: grid;
 }
 
@@ -100,7 +100,7 @@ footer {
         display: none;
     }
 
-    #content {
+    #home-content {
         grid-template-columns: 35% 65%;
         border-top: 1px solid #80808029;
     }
