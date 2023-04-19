@@ -14,7 +14,7 @@ function showDirectors() {
 
   arrayDirectors = getAllDirectors();
 
-  mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='hot'><h2>Directores</h2><div><ul id='directorsList'></ul></div></div>"
+  mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Directores</h2><div><ul id='directorsList'></ul></div></div>"
 
   const directorsList = document.getElementById("directorsList")
 
@@ -34,7 +34,7 @@ function getMoviesFromDirector(director) {
  
  mainContent.innerHTML = "";
 
- mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='hot'><h2>Peliculas dirigidas por " + director + " </h2><div><ul id='directorsList'></ul></div></div>"
+ mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Peliculas dirigidas por " + director + " </h2><div><ul id='directorsList'></ul></div></div>"
 
  directorMovies.forEach(movie => {
 
@@ -42,5 +42,36 @@ function getMoviesFromDirector(director) {
 
  });
 
+ moviesAverage(directorMovies);
+
+
+}
+
+function moviesAverage(directorMovies) {
+
+  const directors = document.querySelector("#directors");
+
+  var moviesAverage = 0;
+
+  directorMovies.forEach(movie => {
+
+    moviesAverage += movie.score;
+ 
+  });
+
+  const heading = document.createElement("h3");
+
+  heading.textContent = "Puntacion media de las peliculas";
+
+  const paragraph = document.createElement("p");
+
+  paragraph.textContent = moviesAverage;
+
+  const div = document.createElement("div");
+  
+  div.appendChild(heading);
+  div.appendChild(paragraph);
+
+  directors.appendChild(div);
 
 }
