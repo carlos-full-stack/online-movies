@@ -1,62 +1,93 @@
 const mainContent = document.querySelector("main")
 
 
- function showHome() {
 
-  const homeContent = content[0]['html'];
+ function showIndex() {
+
+  const homeContent = content[0].html;
 
   mainContent.innerHTML = homeContent;
+
+
+ }
+
+
+ function showDirectorsIndex() {
+
+  const directorsContent = content[1]['html'];
+
+  mainContent.innerHTML = directorsContent;
+
+  content[1].methods.getAllDirectors();
+
+  content[1].methods.getDirectorsIndex();
+
+ }
+
+
+ function showDirectorMovies(director) {
+
+  const directorsContent = content[1]['html'];
+
+  mainContent.innerHTML = directorsContent;
+
+  content[1].methods.getDirectorMovies(director);
+
+  content[1].methods.getMoviesAverage(director);
 
  }
 
 
 
-function getAllDirectors() {
 
-  const arrayDirectors = movies.map(movie => movie.director);
 
-  return arrayDirectors;
 
-}
-
-function showDirectors() { 
+// function showDirectors() { 
   
-  mainContent.innerHTML = "";
+//   mainContent.innerHTML = "";
 
-  arrayDirectors = getAllDirectors();
+//   arrayDirectors = getAllDirectors();
 
-  mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Directores</h2><div><ul id='directorsList'></ul></div></div>"
+//   mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Directores</h2><div><ul id='directorsList'></ul></div></div>"
 
-  const directorsList = document.getElementById("directorsList")
-
-
-  arrayDirectors.forEach(director => {
-
-    directorsList.innerHTML += '<li><a href="#" onclick="getMoviesFromDirector(\'' + director + '\')">' + director + '</li></a>';
-
-  });
+//   const directorsList = document.getElementById("directorsList")
 
 
-}
+//   arrayDirectors.forEach(director => {
 
-function getMoviesFromDirector(director) {
+//     directorsList.innerHTML += '<li><a href="#" onclick="getMoviesFromDirector(\'' + director + '\')">' + director + '</li></a>';
 
- const directorMovies = movies.filter(( movie => movie.director == director ));
+//   });
+
+
+// }
+
+// function getAllDirectors() {
+
+//   const arrayDirectors = movies.map(movie => movie.director);
+
+//   return arrayDirectors;
+
+// }
+
+// function getMoviesFromDirector(director) {
+
+//  const directorMovies = movies.filter(( movie => movie.director == director ));
  
- mainContent.innerHTML = "";
+//  mainContent.innerHTML = "";
 
- mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Peliculas dirigidas por " + director + " </h2><div><ul id='directorsList'></ul></div></div>"
+//  mainContent.innerHTML = "<div id='content' style='grid-template-columns: auto;'><div id='directors'><h2>Peliculas dirigidas por " + director + " </h2><div><ul id='directorsList'></ul></div></div>"
 
- directorMovies.forEach(movie => {
+//  directorMovies.forEach(movie => {
 
-   directorsList.innerHTML += '<li> ' + movie.title +'</li>';
+//    directorsList.innerHTML += '<li> ' + movie.title +'</li>';
 
- });
+//  });
 
- moviesAverage(directorMovies);
+//  moviesAverage(directorMovies);
 
 
-}
+// }
 
 function moviesAverage(directorMovies) {
 
