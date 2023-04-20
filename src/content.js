@@ -51,6 +51,9 @@ const content =
             getDirectorsIndex:
 
                 function() {
+
+                    
+                    arrayDirectors = content[1].methods.getAllDirectors();
                 
                     const directorsList = document.getElementById("directorsList")
 

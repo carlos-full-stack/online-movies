@@ -18,8 +18,6 @@ const mainContent = document.querySelector("main")
 
   mainContent.innerHTML = directorsContent;
 
-  content[1].methods.getAllDirectors();
-
   content[1].methods.getDirectorsIndex();
 
  }
