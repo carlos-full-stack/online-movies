@@ -1,4 +1,7 @@
-const content = 
+import { movies } from './data.js'
+import { showDirectorMovies, mainContent } from './films.js';
+
+export const content = 
 
 [
     
@@ -6,9 +9,9 @@ const content =
         name: "Index",
         title: "Homepage index",
         html: `<div id="index-container">
-                <div id="hot">
-                    <h2>Novedades</h2>
-                    <div>Nuevas peliculas</div>
+                <div id="latest">
+                    <h2>Ultimas subidas</h2>
+                    <div></div>
                 </div>
                 <div id="ramdom">
                     <h2>Aleatorio</h2>
@@ -22,7 +25,16 @@ const content =
                     <h2>Populares</h2>
                     <div>Peliculas populares</div>
                 </div>
-            </div>`
+            </div>`,
+        methods: {
+            showLastestMovies: 
+            
+                function() {
+
+                    //show lastest movies content
+                
+                }
+        }
     },
 
     {
@@ -53,14 +65,22 @@ const content =
                 function() {
 
                     
-                    arrayDirectors = content[1].methods.getAllDirectors();
+                    const arrayDirectors = content[1].methods.getAllDirectors();
                 
                     const directorsList = document.getElementById("directorsList")
 
                     arrayDirectors.forEach(director => {
 
-                        directorsList.innerHTML += '<li><a href="#" onclick="showDirectorMovies(\'' + director + '\')">' + director + '</li></a>';
+                    directorsList.innerHTML += '<li><a href="#" class="directorMoviesLink"</a>'+ director +'</li>';
 
+                    });
+
+                    const directorMoviesLink = document.querySelectorAll(".directorMoviesLink")
+
+                    directorMoviesLink.forEach(link => {
+                        link.addEventListener("click", () => {
+                            showDirectorMovies(link.textContent)
+                        } )
                     });
 
                 },
@@ -77,7 +97,7 @@ const content =
                    
                     directorMovies.forEach(movie => {
                    
-                      directorsList.innerHTML += '<li> ' + movie.title +'</li>';
+                    directorsList.innerHTML += '<li> ' + movie.title +'</li>';
                    
                     });
                    
@@ -89,7 +109,7 @@ const content =
 
                     const directorMovies = movies.filter(( movie => movie.director == director ));
 
-                    const directors = document.querySelector("#directors");
+                    const directorMoviesContainer = document.querySelector("#directorMoviesContainer");
                   
                     var moviesAverage = 0;
                   
@@ -112,7 +132,7 @@ const content =
                     div.appendChild(heading);
                     div.appendChild(paragraph);
                   
-                    directors.appendChild(div);
+                    directorMoviesContainer.appendChild(div);
                   
                   }
             

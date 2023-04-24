@@ -66,7 +66,7 @@ main {
     border-top: 1px solid rgba(128, 128, 128, 0.16);
 }
 
-#hot, #gender, #ramdom, #popular {
+#latest, #gender, #ramdom, #popular {
     padding: 15px 15px 30px 15px;
 }
 
@@ -114,11 +114,11 @@ footer {
         margin-top: 0px;
     }
 
-    #gender, #hot {
+    #gender, #latest {
         border-right: 1px solid #80808029;
     }
 
-    #hot, #gender, #ramdom, #popular {
+    #latest, #gender, #ramdom, #popular {
         padding: 20px 20px 40px 20px;
     }
 
